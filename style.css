@@ -4,7 +4,7 @@ h1{
 
 table, td {
 	border:2px solid rgb(96, 125, 139);
-	border-collapse:collapsed;
+	border-collapse:collapse;
 }
 th{
   font-size:1.2em;
