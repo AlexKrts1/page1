@@ -5,3 +5,6 @@ h1{
 table{
 	border:2px solid rgb(96, 125, 139);
 }
+th{
+  font-size:1.2em;
+}
