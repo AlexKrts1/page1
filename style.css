@@ -2,7 +2,16 @@ h1{
  background-color:#cccccc;
 }
 
+<<<<<<< HEAD
 table,th,td{
 	border:2px solid #cccccc;
 	border-collapse: collapse;
+=======
+table, td {
+	border:2px solid rgb(96, 125, 139);
+	border-collapse:collapse;
+}
+th{
+  font-size:1.2em;
+>>>>>>> c7fe7e8c671fbdd99bbe4225fbaaa3e2554eaa17
 }
