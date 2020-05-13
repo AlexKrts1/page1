@@ -1,0 +1,74 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>�������� ����� (shadow) ���� ������</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=UTF-8">
+<META content="MSHTML 6.00.6000.20815" name=GENERATOR><LINK href="_template.css" 
+rel=stylesheet></HEAD>
+<BODY>
+<DIV id=nsbanner>
+<DIV id=bannerrow1>
+<TABLE class=bannerparthead>
+  <TBODY>
+  <TR id=hdr>
+    <TD class=runninghead noWrap>
+      <DIV id=titlerow>
+      <H1 class=dtH1>Создание копии (shadow) базы 
+данных</H1></DIV></TD></TR></TBODY></TABLE></DIV></DIV>
+<DIV id=nstext>
+<P>
+<UL><FONT face=Tahoma size=2>Как уже указывалось, в разделе справки "Системные 
+  требования", всячески рекомендуется&nbsp;в конфигурации&nbsp;компьютера, на 
+  котором размещается база данных, предусмотреть два жестких диска, при этом 
+  размер таких дисков не имеет принципиального значения. Дело в том, что при 
+  выходе из строя жесткого диска, высока вероятность того, что информацию с 
+  него, в т.ч. базу данных,&nbsp;не удастся восстановить. Это не так страшно для 
+  домашнего компьютера, но для магазина это означает, что придется заново 
+  набирать базу данных, все наименования, снова делать переучет, вносить и 
+  расценивать остатки и т.д., потери времени могут составить до&nbsp;двух 
+  недель.</FONT></UL>
+<UL></UL>
+<UL><FONT face=Tahoma size=2>При наличии же в конфигурации компьютера-сервера 
+  двух жестких дисков, СУБД Firebird® SQL Server позволяет создать так 
+  называемую теневую (shadow) копию базы данных, которая в реальном времени 
+  будет строится полностью идентичной основному файлу базы данных. Разместив 
+  shadow на другом диске (именно физически другом, не на другом разделе того же, 
+  где основная база), мы не теряя в дисковом быстродействии, выигрываем в 
+  отказоустойчивости. При отказе основного диска понадобится совсем немного 
+  времени, чтобы скопировать теневую копию на новый основной диск и восстановить 
+  работу магазина.</FONT></UL>
+<UL><FONT face=Tahoma size=2>Итак, подробнее о том, как сделать shadow базы 
+  данных. После установки, регистрации&nbsp;и запуска программы,&nbsp;откройте 
+  главное меню главной формы программы Сервис/Консоль SQL:</FONT></UL>
+<UL><IMG src="SQLc1.GIF"></UL>
+<UL><FONT face=Tahoma size=2><IMG src="SQLconsole0.GIF"></FONT></UL>
+<UL><FONT face=Tahoma size=2>Выберите в меню консоли "Выполнить SQL script 
+  обновления".</FONT></UL>
+<UL><FONT face=Tahoma size=2></FONT></UL>
+<UL><FONT face=Tahoma size=2>В появившемся окне войдите в только что 
+  проинсталлированный каталог C:\SuperMarket\SQL\</FONT></UL>
+<UL><FONT face=Tahoma size=2>найдите файл SM_CREATE_SHADOW.sql</FONT></UL>
+<UL><FONT face=Tahoma size=2>щелкните на нем правой кнопкой мыши и выберите 
+  меню "Открыть с помощью/Блокнот"</FONT></UL>
+<UL><IMG src="SQLconsole01.GIF"></UL>
+<UL><FONT face=Tahoma size=2>В открывшемся для редактирования файле, укажите 
+  требуемый вам путь к диску и каталогу другого жесткого диска, где вы хотите 
+  разместить теневую копию базы данных.</FONT></UL>
+<UL><IMG src="SQLconsole02.GIF"></UL>
+<UL><FONT face=Tahoma size=2>Закройте файл с сохранением изменений 
+  и&nbsp;выбрав файл в списке скриптов&nbsp;нажмите "Открыть".</FONT></UL>
+<UL><IMG src="SQLconsole03.GIF"></UL>
+<UL><FONT face=Tahoma size=2>В появившемся диалоговом окне подтвердите 
+  выполнение скрипта. В случае успешного выполнения в консоли появится 
+  соответствующая запись.</FONT></UL>
+<UL><FONT face=Tahoma size=2>При необходимости удалить теневую копию, 
+  действуйте аналогично созданию, только используйте скрипт SM_DROP_SHADOW.sql, 
+  при этом&nbsp;редактировать файл&nbsp;не нужно - он удаляется просто по номеру 
+  копии.&nbsp;</FONT></UL>
+<UL><FONT face=Tahoma size=2></FONT></UL>
+<UL><FONT face=Tahoma size=2></FONT></UL>
+<UL><FONT face=Tahoma size=2></FONT><BR></UL>
+<P></P></DIV>
+<DIV class=footer>
+<HR>
+
+<P>&nbsp;Copyright ©2015 <A href="" target=_blank></A>. All Rights Reserved. 
+</P></DIV></BODY></HTML>
